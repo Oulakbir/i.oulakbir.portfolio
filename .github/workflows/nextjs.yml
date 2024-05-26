@@ -64,6 +64,8 @@ jobs:
       - name: Restore cache
         uses: actions/cache@v4
         with:
+          cache: 'npm'
+          cache-dependency-path: 'sub-project/package-lock.json'
           path: |
             .next/cache
           # Generate a new cache whenever packages or source files change.
